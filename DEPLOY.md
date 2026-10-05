@@ -5,7 +5,10 @@ Statische Single-File-Landingpage auf GitHub Pages.
 - Repo: https://github.com/steffensaur/die-unternehmensimmobilie-landingpage
 - Quelle: Branch `main`, Verzeichnis `/`
 - Custom Domain: `www.die-unternehmensimmobilie.de` (Datei `CNAME`)
-- Quelle der Seite: `Landingpage_Die-Unternehmensimmobilie_v2.html` → hier als `index.html`
+- Quelle der Seite: Export aus `~/Downloads/Die Unternehmensimmobilie Redesign/website/`
+  (`index.html` + `marktplatz.html`, gebündelte Single-File-Exporte). Beim Übernehmen
+  werden Titel/Meta-Tags, `lang="de"` und ein dunkler Ladehintergrund ergänzt sowie
+  der `componentDidUpdate`-Fehler der Marktplatz-Seite korrigiert.
 
 Die Plattform-App (Next.js auf Cloudflare Workers, Zugang über `/zugang`) bleibt
 davon unberührt und läuft weiter unter `app.die-unternehmensimmobilie.de`.
@@ -55,6 +58,12 @@ gh api -X PUT repos/steffensaur/die-unternehmensimmobilie-landingpage/pages -F h
 ```
 
 ## Offene Punkte
+
+- **Stand 05.10.2026: DNS ist nicht umgestellt.** `www` und `@` laufen noch über den
+  Cloudflare-Proxy auf den Worker der Plattform (307 → `/zugang`). Die Seite aus diesem
+  Repo wird erst sichtbar, wenn die DNS-Tabelle oben umgesetzt ist.
+- Im Redesign zeigen „Impressum", „Datenschutz", „AGB", „Über uns", „Kontakt" auf `#`,
+  und alle Termin-Buttons auf den Anker `#termin` (keine Buchungs-URL hinterlegt).
 
 - Die Footer-Links `/impressum`, `/datenschutz`, `/agb` sind relativ und laufen
   auf GitHub Pages ins Leere (404). Entweder als eigene HTML-Dateien im Repo

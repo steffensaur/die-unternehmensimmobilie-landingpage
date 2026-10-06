@@ -23,7 +23,10 @@ Falls Wrangler nicht angemeldet ist: vorher `npx wrangler login`.
 Export aus `~/Downloads/Die Unternehmensimmobilie Redesign/website/` (gebündelte
 Single-File-Exporte). Beim Übernehmen werden Titel/Meta-Tags, `lang="de"` und ein dunkler
 Ladehintergrund ergänzt sowie der `componentDidUpdate`-Fehler der Marktplatz-Seite
-korrigiert. Ein frischer Export muss erneut so nachbearbeitet werden.
+korrigiert. Außerdem müssen Event-Attribute auf normalen HTML-Elementen ohne Bindestrich
+stehen (`onpointerdown=`, `onclick=` statt `on-pointer-down=`, `on-click=`), sonst hängt
+die Laufzeit sie nicht an (Regler „Zwei Werte", Schritt-Auswahl im Marktplatz). Ein
+frischer Export muss erneut so nachbearbeitet werden.
 
 ## Offene Punkte
 

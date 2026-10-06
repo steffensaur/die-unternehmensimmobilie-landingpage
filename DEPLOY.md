@@ -28,6 +28,17 @@ stehen (`onpointerdown=`, `onclick=` statt `on-pointer-down=`, `on-click=`), son
 die Laufzeit sie nicht an (Regler „Zwei Werte", Schritt-Auswahl im Marktplatz). Ein
 frischer Export muss erneut so nachbearbeitet werden.
 
+## Ergänzungen gegenüber dem Export (nur in diesem Repo)
+
+- **Schnell-Bewertung mit Herleitung:** Baukosten Neubau (Fläche × €/m² je Objekttyp),
+  Alterswertminderung (1,2 % pro Jahr, max. 45 %), Lage-Zu-/Abschlag nach Region A–D.
+  Region = Entfernung zum nächsten Logistik-Kernmarkt (A bis 30 km +10 %, B bis 70 km ±0 %,
+  C bis 120 km −10 %, D darüber −20 %). Kernmärkte und Ringe stehen in
+  `tools/lageregionen.py`; das Skript erzeugt `tools/lage.json`, `tools/patch_kurzbewertung.py`
+  baut sie in die Seite ein. PLZ-Daten: GeoNames (https://www.geonames.org, CC BY 4.0).
+- **Regler „Zwei Werte":** Werttreiber-Labels (`tools/patch_regler_labels.py`), feste Höhe
+  statt `aspect-ratio` + `min-height` (machte die Seite auf dem Handy überbreit).
+
 ## Offene Punkte
 
 - „Impressum", „Datenschutz", „AGB", „Über uns", „Kontakt" zeigen auf `#`.

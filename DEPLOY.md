@@ -38,6 +38,9 @@ frischer Export muss erneut so nachbearbeitet werden.
   baut sie in die Seite ein. PLZ-Daten: GeoNames (https://www.geonames.org, CC BY 4.0).
 - **Regler „Zwei Werte":** Werttreiber-Labels (`tools/patch_regler_labels.py`), feste Höhe
   statt `aspect-ratio` + `min-height` (machte die Seite auf dem Handy überbreit).
+- **24/7 Spaces:** Header-Hinweis „Ein Service von 24/7 Spaces" und Gruppen-Footer mit den
+  Services UI / WH / LAB auf beiden Seiten (`tools/patch_247spaces.py`, Logo in `tools/assets/`).
+  24/7 Warehouse und 24/7 Lab sind noch nicht verlinkt (keine öffentliche Zielseite).
 
 ## Offene Punkte
 

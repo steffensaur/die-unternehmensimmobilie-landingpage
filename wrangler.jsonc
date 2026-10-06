@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "die-unternehmensimmobilie-landingpage",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  // Rein statische Seite: kein Worker-Skript, nur Assets aus ./public
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "www.die-unternehmensimmobilie.de", "custom_domain": true }
+  ]
+}

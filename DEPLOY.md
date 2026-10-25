@@ -1,14 +1,17 @@
 # Deployment — www.die-unternehmensimmobilie.de
 
-Statische Landingpage als Cloudflare Worker (nur Static Assets, kein Skript).
+Statische Landingpage als Cloudflare Worker (Static Assets aus `public/`; `src/index.js` leitet nur
+die Domain ohne www per 301 auf `https://www.` um).
 
 - Worker: `die-unternehmensimmobilie-landingpage` (Cloudflare-Account „247spaces")
-- Custom Domain: `www.die-unternehmensimmobilie.de` (siehe `wrangler.jsonc`)
+- Custom Domains: `www.die-unternehmensimmobilie.de` und `die-unternehmensimmobilie.de` (siehe `wrangler.jsonc`)
+- `/zugang` auf www leitet auf `https://app.die-unternehmensimmobilie.de/zugang` (`public/_redirects`)
 - Inhalt: `public/` (`index.html`, `marktplatz.html`, `robots.txt`, `sitemap.xml`)
 - Die Marktplatz-Seite ist unter `/marktplatz` erreichbar; `/marktplatz.html` leitet dorthin.
 
 Die Plattform-App (Worker `sauer-gewerbeimmobilien-os`, Zugang über `/zugang`) läuft
-weiter unter `app.`, `marktplatz.` und der Domain ohne www — dort nichts ändern.
+weiter unter `app.` und `marktplatz.` — dort nichts ändern. Die Domain ohne www gehört seit
+25.10.2026 zur Landingpage.
 
 ## Seite aktualisieren
 
@@ -46,4 +49,3 @@ frischer Export muss erneut so nachbearbeitet werden.
 
 - „Impressum", „Datenschutz", „AGB", „Über uns", „Kontakt" zeigen auf `#`.
 - Alle Termin-Buttons zeigen auf den Anker `#termin` (keine Buchungs-URL hinterlegt).
-- `die-unternehmensimmobilie.de` (ohne www) zeigt weiter auf die Plattform (`/zugang`).

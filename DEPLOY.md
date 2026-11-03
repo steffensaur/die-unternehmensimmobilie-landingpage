@@ -44,6 +44,8 @@ frischer Export muss erneut so nachbearbeitet werden.
 - **24/7 Spaces:** Header-Hinweis „Ein Service von 24/7 Spaces" und Gruppen-Footer mit den
   Services UI / WH / LAB auf beiden Seiten (`tools/patch_247spaces.py`, Logo in `tools/assets/`).
   24/7 Warehouse und 24/7 Lab sind noch nicht verlinkt (keine öffentliche Zielseite).
+- **Abschnitt „Der Service"** direkt unter dem Hero: Erklärung (An einem Ort / Reviewed von
+  Experten / Strategiegespräch einmal im Jahr) mit Depot-Visualisierung (`tools/patch_service.py`).
 
 ## Offene Punkte
 

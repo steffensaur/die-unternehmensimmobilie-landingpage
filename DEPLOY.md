@@ -45,7 +45,8 @@ frischer Export muss erneut so nachbearbeitet werden.
   Services UI / WH / LAB auf beiden Seiten (`tools/patch_247spaces.py`, Logo in `tools/assets/`).
   24/7 Warehouse und 24/7 Lab sind noch nicht verlinkt (keine öffentliche Zielseite).
 - **Abschnitt „Der Service"** direkt unter dem Hero: Erklärung (An einem Ort / Reviewed von
-  Experten / Strategiegespräch einmal im Jahr) mit Depot-Visualisierung (`tools/patch_service.py`).
+  Experten / Strategiegespräch einmal im Jahr) mit Depot-Visualisierung (`tools/patch_service.py`) und Ablauf-Grafik
+  Foto → Wert im Dashboard → Experten-Review (`tools/patch_ablauf.py`).
 
 ## Offene Punkte
 
